@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Data - EggEngine</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Data";
+        var mkdocs_page_input_path = "data.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> EggEngine
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Data</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#sort">Sort</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#generatelist">generateList</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#generatearray">generateArray</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#looparray">loopArray</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#findcell">findCell</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">EggEngine</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+      <li>Data</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="usage">Usage</h1>
+<pre><code class="language-py">from EggEngine import data # or 
+import EggEngine.data
+</code></pre>
+<p>Includes many useful functions related to data and data storage within Python, mainly lists and 2D lists (arrays).</p>
+<p>Made by @eggnaut</p>
+<hr />
+<h2 id="sort">Sort</h2>
+<p>Sorts any Python list using the selection sort algorithm.</p>
+<p><strong>Syntax</strong></p>
+<pre><code class="language-py">sort(target)
+</code></pre>
+<p><strong>Args</strong></p>
+<pre><code class="language-text">target (list): any list with any values that needs to be sorted.
+</code></pre>
+<p><strong>Returns</strong></p>
+<pre><code class="language-text">new (list): the same items as the orginal list, but sorted using the selection sort algorithm.
+</code></pre>
+<hr />
+<h2 id="generatelist">generateList</h2>
+<p>Generates a prefilled Python list with random integer items.</p>
+<p><strong>Syntax</strong></p>
+<pre><code class="language-py">generateList(length, startVal, endVal)
+</code></pre>
+<p><strong>Args</strong></p>
+<pre><code class="language-text">length (int): how many items in the list
+startVal (int): the start point for the range of random integers
+endVal (int): the end point for the range of random int
+</code></pre>
+<p><strong>Returns</strong></p>
+<pre><code class="language-text">new (list): a list with random integer items.
+</code></pre>
+<hr />
+<h2 id="generatearray">generateArray</h2>
+<p>Generates a prefilled 2D Python list (array) with random integer items.</p>
+<p><strong>Syntax</strong></p>
+<pre><code class="language-py">generateArray(rows, cols, startVal, endVal)
+</code></pre>
+<p><strong>Args</strong></p>
+<pre><code class="language-text">rows (int): how many rows (lists) you want in the array
+cols (int): how many columns (items) you want in each row (list)
+startVal (int): the start point for the range of random integers
+endVal (int): the end point for the range of random integers
+</code></pre>
+<p><strong>Returns</strong></p>
+<pre><code class="language-text">new (list): a 2D Python list (array) with random integer items.
+</code></pre>
+<hr />
+<h2 id="looparray">loopArray</h2>
+<p>Loops through a 2D Python list (array) and finds all items in it.</p>
+<p><strong>Syntax</strong></p>
+<pre><code class="language-py">loopArray(array)
+</code></pre>
+<p><strong>Args</strong></p>
+<pre><code class="language-text">array (list): the 2D Python list (array) which the function will search through
+</code></pre>
+<p><strong>Returns</strong></p>
+<pre><code class="language-text">cells (list): a list filled with tuples as items. Each tuple follows this format: row (list) index, cell (item) index, cell (item's value)
+</code></pre>
+<hr />
+<h2 id="findcell">findCell</h2>
+<p>Gives the exact coordinates of an item within a 2D Python list (array) in the form of a row index and column index.</p>
+<p><strong>Syntax</strong></p>
+<pre><code class="language-py">findCell(array, cell)
+</code></pre>
+<p><strong>Args</strong></p>
+<pre><code class="language-text">array (list): any 2D Python list (array) that contains items with any type of value.
+cell (any): the item you are looking for within the array
+</code></pre>
+<p><strong>Returns</strong></p>
+<pre><code class="language-text">coordinate: the position of the cell within the array as (row index, column index)
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href=".." class="btn btn-neutral float-left" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
